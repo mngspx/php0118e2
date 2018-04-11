@@ -11,6 +11,10 @@ session_start();
 <body>
 <div id="wrapper">
 	<header id="top-page">
+		<?php 
+			if(isset($_SESSION['login']))
+				echo "Xin chào: ".$_SESSION['login'];
+		 ?>
 		<?php @include 'qc.html'; ?>
 	</header>
 	<nav id="main-menu">
