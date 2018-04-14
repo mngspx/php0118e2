@@ -15,13 +15,18 @@ function HamXuLyHienThiLoi($ma_loi, $noi_dung,$file_loi,$line){
 		</p>
 EndErr;
 	echo $msg;
+
+	if($ma_loi == 2 || $ma_loi == 256){
+		// lỗi nguy hiểm
+		die("Dừng chương trình");
+	}
 }
 
 set_error_handler('HamXuLyHienThiLoi');
  
  echo $x;
 
- // require_once 'b1.php';
+   // require_once 'b1.php';
 
 
 if(!file_exists('b1.php'))
